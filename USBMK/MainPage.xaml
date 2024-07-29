@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="USBMK.MainPage"
+             xmlns:resources="clr-namespace:USBMK.Resources" Loaded="ContentPage_Loaded">
+
+    <Grid Margin="10,10,10,0" x:FieldModifier="Public" x:Name="grdMain">        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ImageButton x:Name="btnKeyboard" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" WidthRequest="32" HeightRequest="32" Clicked="btnKeyboard_Clicked" Aspect="AspectFit" Source="keyboard.png"></ImageButton>
+            <ImageButton x:Name="btnMute" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" WidthRequest="32" HeightRequest="32" Clicked="btnMute_Clicked" Aspect="AspectFit" Source="mute.png"></ImageButton>
+            <ImageButton x:Name="btnSettings" Grid.Column="2" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="32" HeightRequest="32" Clicked="btnSettings_Clicked" Aspect="AspectFit" Source="settings.png"></ImageButton>
+            <Switch x:FieldModifier="Public" x:Name="tglEnableHid" Grid.Column="3" Toggled="Switch_Toggled"></Switch>
+        </Grid>
+        
+        <StackLayout Grid.Row="1" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label x:FieldModifier="Public" x:Name="lblOneTap" HorizontalOptions="Center" Text="{x:Static resources:AppResources.OneTapMessage}"></Label>
+            <Label x:FieldModifier="Public" x:Name="lblCursorMove" HorizontalOptions="Center" Text="{x:Static resources:AppResources.CursorMove}"></Label>
+            <Label x:FieldModifier="Public" x:Name="lblLongTap" HorizontalOptions="Center" Text="{x:Static resources:AppResources.LongTap}"></Label>
+            <Label x:FieldModifier="Public" x:Name="lblRightClick" HorizontalOptions="Center" Text="{x:Static resources:AppResources.RightClick}"></Label>
+            <Label x:FieldModifier="Public" x:Name="lblScroll" HorizontalOptions="Center" Text="{x:Static resources:AppResources.Scroll}"></Label>        
+        </StackLayout>
+        
+    </Grid>
+
+</ContentPage>

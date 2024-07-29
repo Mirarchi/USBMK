@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="USBMK.SettingsPage"
+             Title="Settings Page" Loaded="ContentPage_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="48"></RowDefinition>
+            <RowDefinition Height="48"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label  VerticalOptions="Center"  HorizontalOptions="Start" Text="From a known list:" Margin="10"></Label>
+        <Picker VerticalOptions="Center" x:Name="cmbKnown" Grid.Column="1" SelectedIndexChanged="cmbKnown_SelectedIndexChanged"></Picker>
+        <Label Grid.Row="1" Text="Vendor ID:" VerticalOptions="Center"  HorizontalOptions="Start" Margin="10" />
+        <Entry VerticalOptions="Center" Grid.Row="1" x:Name="txtVendorID" Grid.Column="1"></Entry>
+        <Label Grid.Row="2" Text="Product ID:" VerticalOptions="Center"  HorizontalOptions="Start" Margin="10" />
+        <Entry VerticalOptions="Center" x:Name="txtProductID" Grid.Row="2" Grid.Column="1"></Entry>
+        <Label Grid.Row="3" Text="Manufacturer:" VerticalOptions="Center"  HorizontalOptions="Start" Margin="10"/>
+        <Entry VerticalOptions="Center" x:Name="txtManufacturer" Grid.Row="3" Grid.Column="1"></Entry>
+        <Label Grid.Row="4" Text="Description:" VerticalOptions="Center"  HorizontalOptions="Start" Margin="10"/>
+        <Entry VerticalOptions="Center" x:Name="txtDescription" Grid.Row="4" Grid.Column="1"></Entry>
+        <Label Grid.Row="5" Text="Serial Number:" VerticalOptions="Center"  HorizontalOptions="Start" Margin="10"/>
+        <Entry VerticalOptions="Center" x:Name="txtSerial" Grid.Row="5" Grid.Column="1"></Entry>
+        <Button HorizontalOptions="End" Margin="10" x:Name="btnSave" Grid.Row="6" Grid.Column="1" Text="Save" WidthRequest="100" HeightRequest="36" Clicked="btnSave_Clicked"></Button>
+        <Button HorizontalOptions="Start" Margin="10" x:Name="btnRestore" Grid.Row="6" Text="Restore defaults" WidthRequest="150" HeightRequest="36" Clicked="btnRestore_Clicked"></Button>
+    </Grid>
+</ContentPage>
