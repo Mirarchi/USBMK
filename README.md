@@ -7,4 +7,4 @@ This is HIGHLY EXPERIMENTAL and can cause unexpected reboots on your android dev
 
 For now the only keymap that is working is the standard US/UK keyboard.
 
-This was tested with the 'Unexpected Keyboard' app on Android 11 (Android 14 should also be ok, Android 10, at least in emulator, is not working).
+This was tested with the ['Unexpected Keyboard'](https://github.com/Julow/Unexpected-Keyboard) app on Android 11 (Android 14 should also be ok, Android 10, at least in emulator, is not working).
